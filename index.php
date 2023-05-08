@@ -310,7 +310,7 @@
                 <div class="col-md-6 px-5">
                     
                         <div class="imgs-apresentacao">
-                          <img src="images/edicao4/capa.jpg">
+                          <img src="images/edicao4/10.JPG">
                          </div>
                         <h5 class="display-5 title-color-3">4ª Edição</h5>
                         <p>
