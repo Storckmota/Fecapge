@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <div id="app">
     <nav class="py-1 site-header sticky-top">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <a class="py-2" href="#">
@@ -55,8 +56,12 @@
                 <div class="m-md-2">
                     <div class="d-flex justify-content-center mt-4 ">
                         <div class="d-flex justify-content-around flex-wrap mb-3" style="width: 100%; max-width: 800px">
-                            <a class="btn btn-outline-light btn-red-dark mb-2" href="https://docs.google.com/forms/d/1hydQo8DLWWOucDGr0JSs28nEGQ1gIC38boBsZneEet8/viewform?pli=1&pli=1&edit_requested=true" target="_blank">Seja um Expositor</a>
+                            <!-- <a class="btn btn-outline-light btn-red-dark mb-2" href="https://docs.google.com/forms/d/1hydQo8DLWWOucDGr0JSs28nEGQ1gIC38boBsZneEet8/viewform?pli=1&pli=1&edit_requested=true" target="_blank">Seja um Expositor</a><!-->
+
+                            <a class=" btn btn-outline-light btn-red mb-2" href="#" data-toggle="modal" style="width:200px" data-target="#expositores">Expositores da 4ª Edição</a>
+
                             <a class="btn btn-outline-light btn-red-dark mb-2" href="#" data-toggle="modal" data-target="#programacao">Programação</a>
+                            
                             <a class="btn btn-outline-light btn-red-dark mb-2" href="#" 
                             data-toggle="modal" data-target="#rodada-de-negocios-modal">Rodada de Negócios</a>
                             <!--<a class="btn btn-outline-light btn-red mb-2 d-none" href="#programacao" data-toggle="modal" data-target="#programacao">Programação</a>
@@ -166,6 +171,7 @@
                 <img src="images/p-confea.jpg" class="m-2">
                 <img src="images/p-crea-es.jpg" class="m-2">
                 <img src="images/p-mutua-es.jpg" class="m-2">
+                <img src="images/LOGOPE.jpg" class="m-2">
             </div>
             <hr />
         </div>
@@ -219,6 +225,11 @@
             <div class="d-flex align-items-center justify-content-center flex-wrap">
                 <img src="images/logo-rodada-de-negocios.jpg" class="m-2 ">
                 <img src="images/logo-negocios.jpg" class="m-2">
+                    
+                <img src="images/Ancoras6.png" class="m-2">
+
+
+                </div>
             </div>
             <div class="d-flex align-items-center justify-content-center flex-wrap">
                
@@ -254,6 +265,7 @@
                 </div>
             </div>
             <div class="row text-justify">
+                
                 <div class="col-md-6 px-5">
                     <div class="imgs-apresentacao">
                         <img src="images/edicao1/capa.jpg">
@@ -264,6 +276,7 @@
                     <p> <b><a href="#" class="title-color-3" data-toggle="modal" data-target="#edicao1"><i>+
                                     Fotos</i></a></b> </p>
                 </div>
+                
                 <div class="col-md-6 px-5">
                     <div class="imgs-apresentacao">
                         <img src="images/edicao2/capa.jpg">
@@ -275,6 +288,7 @@
                     <p> <b><a href="#" class="title-color-3" data-toggle="modal" data-target="#edicao2"><i>+
                                     Fotos</i></a></b></p>
                 </div>
+                
                 <div class="col-md-6 px-5">
                     <div class="imgs-apresentacao">
                         <img src="images/edicao3/4.png">
@@ -287,8 +301,23 @@
                         e palestras com pessoas de renome e relevância na área. </p>
                     <p> <b><a href="#" class="title-color-3" data-toggle="modal" data-target="#edicao3"><i>+
                                     Fotos</i></a></b></p>
-                     <a class=" btn btn-outline-light btn-red mb-2" href="#" data-toggle="modal" style="width:200px" data-target="#expositores">Expositores da 3ª Edição</a>
+                     
+                                    <a class=" btn btn-outline-light btn-red mb-2" href="#" data-toggle="modal" style="width:200px" data-target="#expositores" @click.prevent="setExpositores()">Expositores da 3ª Edição</a>
+
+                     
                 </div>
+
+                <div class="col-md-6 px-5">
+                    
+                        <div class="imgs-apresentacao">
+                          <img src="images/edicao4/capa.jpg">
+                         </div>
+                        <h5 class="display-5 title-color-3">4ª Edição</h5>
+                        <p>
+                        A 4ª edição da Conferência Onshore e Offshore foi realizada nos dias 18 e 19 de abril de 2023 no Espaço Patrick Ribeiro. Além das empresas que participaram da Rodada de Negócios realizada pelo SEBRAE, cujo objetivo foi proporcionar um contato direto com as micro e pequenas empresas prestadoras de serviços e empresas operadoras demandadoras de serviços.  </p>
+                        <p> <b><a href="#" class="title-color-3" data-toggle="modal" data-target="#edicao4"><i>+
+                                    Fotos</i></a></b></p>
+                    </div>
             </div>
         </div>
     </div>
@@ -304,7 +333,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <a href="https://pt.surveymonkey.com/r/Inscricao_Fornecedor-FECAPGE-2023-Rodada_de_Negocios_Presencial-ES " target="_blank"><img src="images/rodadanegocios2023.jpg" class="img-fluid" /></a>
+                <a href="https://pt.surveymonkey.com/r/Inscricao_Fornecedor-FECAPGE-2023-Rodada_de_Negocios_Presencial-ES " target="_blank"><img src="images/Ancoras6.png" class="img-fluid" /></a>
                 </div>
             </div>
         </div>
@@ -324,46 +353,48 @@
                     <div class="row">
                     <div class="col-md-6">
                     <h4><strong class="title-color-3">18/04 </strong><img src="images/icon-calendario.jpg" /></h4>
-                    
-                                    <li><b>Investimentos no ES - 18h</b></li>
+                                    <br>
+                                    <li><b>18h</b> - Investimentos no ES - Apresentação da Rota Estratégica de petróleo e gás e de energia - Observatório da Industria Silvia Varejão (Gerente de Estudos Econômicos)
+                                    </li>
+                                    <br>
+                                     <p>PRIO – Investimentos no Espírito Santo </p>
+            
+                                     <p>Jean Carlos Calvi (Gerente de Engenharia de Poços & Subsea)</p>
 
-                                    <ol>
-            <li>Apresentação da Rota Estratégica de petróleo e gás e energia -  Observátorio da Industria</li>
-                                        <li>PRIO - Geraldo Carneiro </li>
-                                        <li>BW Energy - Alex Garcia</li>
-                                        
-                                    </ol>
+                                    
+                                    <li><b>19h</b> - Transição Energética - Plano de descarbonização do ES 
+                                    Neyval Costa Reis Nunes (Professor de Engenharia Ambiental da UFES) </li>
+                                   <br>
+                                   <p>Findes e os pactos junto as industrias em prol da descarbonização
+                                   Paulo Silva (Consulto de ESG da Findes)
 
-                                    <li><b>Transição Energética - 19h</b></li>
-
-                                    <ol>
-                                        <li>Apresentação do Governo do ES (FAPES) - Professor Neynal</li>
-                                        <li>Findes e os pactos junto as industrias - Paulo Silva </li>
-                                        <li>Soluções de Apoio (Sebrae, Findes, Senai,...) - Fernando Geller</li>
-                                        <li>Buscar projeto Mangue do ES (Ufes e Neovision) - Lucas/ Professor Alberto</li>
-                                    </ol>
+                                    
+                                    <li><b>20h</b> - Apresentação da MUTUA</li>
+                                    <br>
 
                     <h4><strong class="title-color-3">19/04 </strong><img src="images/icon-calendario.jpg" /></h4>
-                    
-                                 <li><b>Desenvolvimento da Cadeia de fornecedores - 18h</b></li>
+                                 <br>
+                                 <li><b>18h</b> - Cenários e oportunidades de negócios Onshore e Offshore 
+                                 Glauco Nader - Sócio-Diretor da Dinamus Consultoria</li>
+
+                                 <li><b>18:30h</b> - - Polos Sebrae de Referência Onshore e Offshore - Parceria ABPIP
+                                 Ana Karla Macabu - Sebrae/ES e Allana Perazzo - Sebrae/RJ</li>
+
+                                 <li><b>19:00h</b> - Programas de qualificação para atender aos requisitos do setor
+                                 José Vieira - IEL e Ana Karla Macabu - Sebrae/ES</li>
+
+                                 <li><b>19:30h</b> - Portais de cadastramento B2B – Dinamus
+                                 Glauco Nader - Sócio-Diretor da Dinamus Consultoria</li>
+                                 <br>
+                                        
+                                       
+                                 <h4><strong class="title-color-3">MINICURRICULOS</strong> 
+                                 </h4>  
+                                    <br>
+                                    <li><b>Ana Karla Macabu</b> - Administradora, Gestora de projetos da Unidade de Competitividade e Produtividade do Sebrae Espírito Santo atuando no apoio aos pequenos negócios fornecedores e potenciais fornecedores do setor de petróleo e gás há mais de 20 anos e em projetos de Encadeamento Produtivo.</li>
 
                                 
-                                    <ol>
-                                        <li>Polo Onshore e Polo Offshore - Sebrae (Política de compras sugeridas - ABPIP) - Anabal Santos</li>
-                                        <li>Trilhas de desenvolvimento - Sebrae - Ana Karla</li>
-                                        <li>Prodfor - IEL / Petrobras - Carla</li>
-                                        <li>Portais de cadastramento - Glauco Nader</li>
-                                    </ol>
-
-                                    <li><b>Inovação - 19h</b></li>
-
-                                
-                                    <ol>
-                                        <li>MCI - Iomar</li>
-                                        <li>Demandas das empresas (Equinor,Shell,Petrobras,Seacreast) - FCPGE / Findeslab</li>
-                                        <li>Cases de Inovação com empresas do ES - FCPGE / Findeslab</li>
-                                
-                                    </ol>
+                                    
                                     
                         <!--<div class="col-md-6">
                             <h4><strong class="title-color-3">18/04 </strong><img src="images/icon-calendario.jpg" />
@@ -498,6 +529,8 @@
                                     height: 130px;" :src="expositor.Logomarca" :alt="expositor.razao_social" />
                                 </a>
                             </div>
+
+                            
                             <div>
                                 <div class="p-3"><strong class="text-uppercase">{{expositor.razao_social}}</strong>
                                 </div>
@@ -656,6 +689,70 @@
         </div>
     </div>
 
+    <div class="modal fade pg-show-modal" id="edicao4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Fotos da 4ª Edição</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="carousel4" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel4" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel4" data-slide-to="1"></li>
+                            <!--<li data-target="#carousel1" data-slide-to="2"></li><!-->
+                            <li data-target="#carousel4" data-slide-to="3"></li>
+                            <li data-target="#carousel4" data-slide-to="4"></li>
+                            <li data-target="#carousel4" data-slide-to="6"></li>
+                            <li data-target="#carousel4" data-slide-to="7"></li>
+                            <li data-target="#carousel4" data-slide-to="8"></li>
+                            <li data-target="#carousel4" data-slide-to="9"></li>
+                            
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/edicao4/1.JPG">
+                            </div>
+                            <!--<div class="carousel-item">
+                                <img class="d-block w-100" src="images/edica4/2.JPG">
+                            </div><!-->
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/capa.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/3.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/4.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/5.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/6.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/7.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/8.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/9.JPG">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/edicao4/10.JPG">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+                        <a class="carousel-control-next" href="#carousel4" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div style="position: fixed; bottom: 5px; right: 5px; z-index: 9999;">
         <a href="https://wa.me/5527988883017" target="_blank"><img src="images/logo-whatsapp-512.png" width="60px" height="60px"></a>
@@ -664,9 +761,405 @@
     <footer class="container">
         <p class="text-center">©<?=date('Y')?> Todos os direitos reservados - FECAPGE</p>
       </footer>
-
-    <script src="https://unpkg.com/vue@3"></script>
+</div>
+</body>
+<script src="https://unpkg.com/vue@3"></script>
     <script>
+          Vue.createApp({
+            data() {
+                return {
+                                        
+                    expositores: [{
+                        "created_at": "3/29/2022 9:34:19",
+                        "razao_social": "Endserv Engenharia e Serviços",
+                        "endereco": "Av. Copacabana, 16, Morada de Laranjeiras , Serra - ES",
+                        "responsavel": "Tatyana Soriano de Oliveira",
+                        "telefone": 2731910113,
+                        "celular": 27996466251,
+                        "site": "https://endservgroup.com",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1w4-bn7KbHXUdlBkInmpUY_7jc57IAGwt",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1dO5Bwh7V5mimmxqtbG22Fd-cIpWkxBnR",
+                        "email": "comercial@endserv.com.br"
+                    }, {
+                        "created_at": "3/30/2022 8:48:38",
+                        "razao_social": "DIVEQ DISTRIBUIDORA VITÓRIA DE EQUIPAMENTOS LTDA",
+                        "cnpj": "02670533000106",
+                        "endereco": "Rua Tancredo Neves 323, São Diogo I, Serra - ES",
+                        "responsavel": "Michel Weber",
+                        "cpf": 01197117881,
+                        "telefone": 2730606800,
+                        "celular": 27992565715,
+                        "site": "https://diveq.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=18xbgvJ16t6o4omxT6UX3sBq1_fm8FLHd",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1siictkjMsnZEDb4zWbBqQkI6ni85Vhui",
+                        "email": "diveq@diveq.com.br"
+                    }, {
+                        "created_at": "3/30/2022 8:53:45",
+                        "razao_social": "PHV AUTOMAÇÃO",
+                        "cnpj": "1,26555E+13",
+                        "endereco": "RUA ITAPEMIRIM, 102",
+                        "responsavel": "PHILIPE VIANA",
+                        "telefone": 02732266722,
+                        "celular": 027992234900,
+                        "site": "https://phvautomacao.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=14N4hD5ScAG6LWYrOrbhdBqR__Gyiracz",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1097MafhThbcqd3bYbLAn6QUgPYdUHw06",
+                        "email": "thiago.nascimento@phvautomacao.com.br"
+                    }, {
+                        "created_at": "3/30/2022 9:18:07",
+                        "razao_social": "ZARUC TECNOLOGIA LTDA",
+                        "endereco": " Rua Afonso Arinos Melo Franco, 181, Parque Residencial, Laranjeiras, Serra|ES, CEP: 29165-491",
+                        "responsavel": "Daniel Arrais",
+                        "telefone": 2733001200,
+                        "celular": 27995011276,
+                        "site": "http://www.zaruc.com.br/",
+                        "Logomarca": "/images/Zaruc.png",
+                        "email": "contato@zaruc.com.br"
+                    }, {
+                        "created_at": "3/30/2022 9:48:28",
+                        "razao_social": "FaSerra",
+                        "endereco": "R. L, 11 - Rosário de Fátima, Serra - ES, 29161-152",
+                        "responsavel": "Marcio Rosetti de Castro",
+                        "telefone": 273318307,
+                        "celular": 2733183078,
+                        "site": "http://www.faserra.com.br/",
+                        "Logomarca": "/images/Faserra.png",
+                        "email": "faserra@faserra.com.br"
+                    }, {
+                        "created_at": "8/04/2023 9:51:43",
+                        "razao_social": "APBVIX - Apoio Pultrusao do Brasil Vitória ",
+                        "endereco": "Rua Atalydes M. de Souza, 145 CIVIT I, Serra-ES",
+                        "responsavel": "Welligton Ribeiro Queiroz",
+                        "telefone": 2732814460,
+                        "celular": 27996569442,
+                        "site": "www.APBVIX.com.br",
+                        "Logomarca": "/images/Apbvix.jpeg",
+                        "email": "comercial@apbvix.com.br"
+                    }, {
+                        "created_at": "3/30/2022 13:47:00",
+                        "razao_social": "Supply Log Comercio e Serviços Ltda",
+                        "cnpj": "10.465.858/0001-85",
+                        "endereco": "Rod Darly Santos, 4723 - Nossa Sra. da Penha - Vila Velha/ES",
+                        "responsavel": "Soraya Costa",
+                        "cpf": 62372394568,
+                        "telefone": 2733402984,
+                        "celular": 997699974,
+                        "site": "https://supply-log.com",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1oJGH4C_xsX_rpGPRY7AO5snxoUQdiBMx",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1Jmsxzqxl7hhtLXXc6WTKH4SuRAAmGBRP",
+                        "email": "comercial@supply-log.com"
+                    }, {
+                        "created_at": "3/30/2022 16:11:59",
+                        "razao_social": "NV7 Telecom ",
+                        "responsavel": "Bruno Junio Agapito",
+                        "telefone": 2722338960,
+                        "celular": 27998220741,
+                        "site": "http://nv7fibra.com.br/",
+                        "Logomarca": "/images/Logo-NV7.png",
+                        "email": "atendimento@nv7telecom.com.br"
+                    }, {
+                        "created_at": "3/31/2022 11:40:25",
+                        "razao_social": "Etinov Equipamentos Industriais LTDA",
+                        "cnpj": "17.626.612/0001-97",
+                        "endereco": "Rua O, número 6 quadra 20",
+                        "responsavel": "Fabricio Ronccalli Alves Araújo",
+                        "cpf": 15629541722,
+                        "telefone": 2730682553,
+                        "celular": 27988798280,
+                        "site": "https://etinov.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1Re3jw_xxVbZBO8lWCxOXDyQqBLCtSeAT",
+                        "Logomarca": "images/etinov.png",
+                        "email": "fabricio.araujo@etinov.com.br"
+                    }, {
+                        "created_at": "3/31/2022 11:54:01",
+                        "razao_social": "ENTREGAMOS SOLUCOES DE NEGOCIOS SCM LTDA",
+                        "responsavel": "LAÍS MOREIRA",
+                        "telefone": 27996114321 ,
+                        "celular": 27996114321,
+                        "site": "http://www.entregamos.com.br/",
+                        "Logomarca": "/images/entregamos.jpg"
+                    }, {
+                        "created_at": "3/31/2022 13:14:35",
+                        "razao_social": "VPS GROUP",
+                        "cnpj": 28611407000174,
+                        "endereco": "R. Alexandre Buaiz, 300, Ed. Work Center sala 2001,  Enseada do Suá, Vitória-ES",
+                        "responsavel": "Manoel Passos",
+                        "cpf": 05344440758,
+                        "telefone": 27981504950,
+                        "celular": 27981504950,
+                        "site": "http://vpsgroup.com.br",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1DXgaS5UEz0H-YNUyzhOJzxq_JrCt0BBt",
+                        "email": "manoelpassos1978@gmail.com"
+                    }, {
+                        "created_at": "3/31/2022 19:03:15",
+                        "razao_social": "FAC ENGENHARIA & CONSULTORIA",
+                        "endereco": "Praia da Costa  Vila Velha",
+                        "responsavel": "FELIPE ALFAIA DO CARMO",
+                        "telefone": 27995006621,
+                        "celular": 27981559158,
+                        "site": "www.facengenharia.com.br",
+                        "Logomarca": "/images/Facen.png",
+                        "email": "comercial@facengenharia.com.br"
+                    }, {
+                        "created_at": "4/1/2022 9:34:21",
+                        "razao_social": "Blemi Equipamentos Industriais",
+                        "cnpj": "3,41899E+13",
+                        "endereco": "Av. Nossa Senhora da Penha, 2035. Santa Luíza, Vitória - ES. Ed. Avelino Dadalto, sala 105.",
+                        "responsavel": "Bruno Rodrigues Lellis",
+                        "cpf": "13319128736",
+                        "telefone": 273244-4440,
+                        "celular": 2799904-7435,
+                        "site": "https://blemi.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1Kqc799LeCm2c-hrMuAtZxDlQCSFQE1r4",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=18LnFfLT1OPMUpDyKxJUpzmqy9nwSMadP",
+                        "email": "contato@blemi.com.br"
+                    }, {
+                        "created_at": "4/1/2022 10:12:17",
+                        "razao_social": "Triglav Soluções em Aço Ltda",
+                        "cnpj": "3,83952E+13",
+                        "endereco": "Rua Professor Carlos Leonardo Kulimg, 20 - Maria Ortiz - Vitoria - ES - cep",
+                        "responsavel": "Triglav Solucoes em Aco",
+                        "cpf": "05380322786",
+                        "telefone": 2733767666,
+                        "celular": 27992477337,
+                        "site": "https://triglav.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1Xf0aAdviehA9-6TgnmA4qWlqfTl3wzq2",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1KyP549GwmC6E6xPS9rPKmheepDKSVogX",
+                        "email": "anderson.souza@triglav.com.br"
+                    }, {
+                        "created_at": "4/1/2022 11:03:03",
+                        "razao_social": "VILUX VITORIA LUX INDUSTRIAL EIRELI",
+                        "cnpj": "3,1495E+13",
+                        "endereco": "RUA ARARA AZUL 355, LT 7 QD 75 - NOVO HORIZONTE - SERRA - ES CEP: 29163-306",
+                        "responsavel": "EDMANN DAMAZIO DOELLINGER",
+                        "cpf": "34304843753",
+                        "telefone": 2733381545,
+                        "celular": 2799989-7071,
+                        "site": "https://vilux.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1r-12QI3vXLtv9I4tcoInKg-ILxN2eAua",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1p_nx2yArlzVU3oEC1uHh61XBrWUo39dV",
+                        "email": "FINANCEIRO@VILUX.COM.BR"
+                    }, {
+                        "created_at": "4/1/2022 13:37:39",
+                        "razao_social": "SEND METROLOGIA DO BRASIL LTDA",
+                        "cnpj": "08833240000189",
+                        "endereco": "RUA ALVARO DE CASTRO MATTOS N60 BAIRRO REPÚBLICA VITÓRIA-ES 29070-020",
+                        "responsavel": "TADEU PADILHA DE MENEZES",
+                        "cpf": "68223609720",
+                        "telefone": 02733270291,
+                        "celular": 027995700291,
+                        "site": "https://sendmetrologia.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=101AQaZTzqVDGD8av2oheuR0C9hbMACTS",
+                        "Logomarca": "images/send.png",
+                        "email": "comercial@sendmetrologia.com.br"
+                    }, {
+                        "created_at": "4/1/2022 17:18:36",
+                        "razao_social": "BZ Tecnologia e Serviços Ltda",
+                        "cnpj": "1,28247E+13",
+                        "endereco": "Av. Nossa Senhora da Penha, 714, sala 920, RS Trade Tower, Praia do Canto, CEP: 29055-131, Vitória, ES.",
+                        "responsavel": "Maria Eliza Binatti",
+                        "cpf": "66995825772",
+                        "telefone": 2724642024,
+                        "celular": 27992366272,
+                        "site": "https://mega-vitoria.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=149DLw4Hco6t8U6W95P5yzQFYLEj1Ws78",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1XNeOOyBpBYnjv3_qHvp1HD0r5tmmx7bY",
+                        "email": "elizabinatti@mega-vitoria.com.br"
+                    }, {
+                        "created_at": "4/2/2022 14:06:34",
+                        "razao_social": "Openport Sistemas Ltda EPP",
+                        "endereco": "AV. JERÔNIMO MONTEIRO, 1000 - CENTRO, VITÓRIA - ES, 29010-935",
+                        "responsavel": "Reinaldo de Assis Ruela",
+                        "telefone": 2733350783,
+                        "celular": 27981239525,
+                        "site": "http://www.openport.com.br/",
+                        "Logomarca": "/images/Openport.png",
+                        "email": "OPENPORT@OPENPORT.COM.BR"
+                    }, {
+                        "created_at": "4/3/2022 12:55:08",
+                        "razao_social": "Q & Q QUALIDADE TOTAL",
+                        "cnpj": "36.362.892/0001-18",
+                        "endereco": "Rua jose faria 88 Ed Plena Sena Sala 506",
+                        "responsavel": "Ary Chamon",
+                        "cpf": "3,33333E+13",
+                        "telefone": 2731007995,
+                        "celular": 27999796784,
+                        "site": "em construção",
+                        "Logomarca": "images/qualidadetotal.jpeg",
+                        "email": "arychamon@industrialclean.com.br"
+                    }, {
+                        "created_at": "4/4/2022 0:29:53",
+                        "razao_social": "JRUANO CONSULTORIA E SERVIÇOS LTDA",
+                        "endereco": "Rua Santa Rita de Cássia, 229 - salas 101/102/103 - Bairro de Lourdes, Vitória ES CEP: 29042-753",
+                        "responsavel": "JULIO CÉSAR RUANO DA SILVA",
+                        "telefone": 2733236950,
+                        "celular": 27992939909,
+                        "site": "https://www.environlink.com.br/",
+                        "Logomarca": "images/Envirolink.png",
+                        "email": "contato@environlink.com.br "
+                    }, {
+                        "created_at": "4/4/2022 8:43:46",
+                        "razao_social": "Avante Reparos Navais",
+                        "endereco": "R. Castelo, 455 - Jardim Limoeiro, Serra - ES, 29163-400",
+                        "responsavel": "Rodrigo Martins",
+                        "telefone": 2741022590,
+                        "celular": 27981510808,
+                        "site": "www.avantereparos.com.br",
+                        "Logomarca": "images/Avante.png",
+                        "email": "comercial@avantereparos.com.br"
+                    }, {
+                        "created_at": "4/4/2022 10:19:11",
+                        "razao_social": "MOGAI TECNOLOGIA DE INFORMACAO S.A",
+                        "endereco": "Av. Gelú Vervloet . n° 590 . sala 1108 Jardim Camburi . Vitória/ES . CEP 29.090-100",
+                        "responsavel": "FRANCO MACHADO",
+                        "telefone": 2733371818,
+                        "celular": 27992333437,
+                        "site": "www.mogai.com.br",
+                        "Logomarca": "images/Mogai.png",
+                        "email": "comercial@mogai.com.br"
+                    }, {
+                        "created_at": "4/4/2022 10:52:49",
+                        "razao_social": "Cecappes",
+                        "cnpj": "2,33349E+13",
+                        "endereco": "Av Carlos Lindenberg 1433 Aribiri Ed Mateus sala 101 29120-568",
+                        "responsavel": "Eloy Farias Schineider Mateus",
+                        "cpf": 00234365730,
+                        "telefone": 2732291719,
+                        "celular": 27999931714,
+                        "site": "https://cecappes.com.br",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1SpDrY-DP6n2OsUDUC6eDpLj9GZhEPaYO",
+                        "email": "contato@cecappes.com.br"
+                    }, {
+                        "created_at": "4/4/2022 12:02:43",
+                        "razao_social": "Rodolpho Carvalho Charpinel Diniz",
+                        "responsavel": "Rodolpho Carvalho Charpinel Dinj",
+                        "telefone": 28999789781,
+                        "celular": 28999789781,
+                        "site": "https://www.rocicorretora.com.br",
+                        "Logomarca": "images/Roci.png",
+                        "email": "comercial@rocicorretora.com.br"
+                    }, {
+                        "created_at": "4/4/2022 15:29:54",
+                        "razao_social": "Heach Academy",
+                        "endereco": "Rua Carlos Monteiro de Lemos, 262 Jardim da Penha, Vitória - ES",
+                        "responsavel": "Bruno Papa Schneider",
+                        "telefone": 2730242848,
+                        "celular": 27998449858,
+                        "site": "www.heach.com.br",
+                        "Logomarca": "images/Heach.png",
+                        "email": "contato@heach.com.br"
+                    }, {
+                        "created_at": "4/4/2022 17:24:59",
+                        "razao_social": "Sudeste Consultoria Ambiental Ltda",
+                        "cnpj": "42.269.585/0001-90",
+                        "endereco": "Av. Presidente Costa e Silva, nº880, sala 103, Bairro República, Vitória-ES",
+                        "responsavel": "Pedro Henrique Nascimento Brandão",
+                        "cpf": "154.880.057-06",
+                        "telefone": 273376-8146,
+                        "celular": 2799717-4173,
+                        "site": "https://consultoriasudeste.com.br",
+                        "portfolio": "https://drive.google.com/uc?export=view&id=1pUVKblzjrvCno7xdosIl4iIKYOHfmZWL",
+                        "Logomarca": "https://drive.google.com/uc?export=view&id=1TMy6qSq1J1j8TrQeOfvkAr-yt_JzoHJb",
+                        "email": "comercial@consultoriasudeste.com.br"
+                    }, {
+                        "created_at": "4/4/2022 18:43:15",
+                        "razao_social": "AUTVIX SOLUÇÕES INDUSTRIAIS",
+                        "endereco": "Av. Paulo Pereira Gomes, 190 Morada de Laranjeiras, Serra – ES, 29166-828",
+                        "responsavel": "Wanderson Araujo Silva",
+                        "telefone": 2730396559,
+                        "celular": 27992276007,
+                        "site": "http://www.autvix.com.br/",
+                        "Logomarca": "images/Autivix.png",
+                        "email": "contato@autvix.com.br"
+                    }, {
+                        "created_at": "4/4/2022 19:56:52",
+                        "razao_social": "VIX",
+                        "responsavel": "MARCELO FERREIRA",
+                        "telefone": 2733470154,
+                        "celular": 27998885340,
+                        "Logomarca": "images/Vix.jpg"
+                    }, {
+                        "created_at": "4/4/2022 20:06:36",
+                        "razao_social": "Meta.X Inovação",
+                        "endereco": "Av. José Maria Vivacqua Santos, nº 280, Unique Mall, sala 1.712, Jardim Camburi, Vitória/ES, CEP.: 29.090-160",
+                        "responsavel": "Márcio Goicocheia",
+                        "telefone":2722337860,
+                        "celular": 27992463110,
+                        "site": "https://www.metax.ind.br/",
+                        "Logomarca": "images/metax.png",
+                        "email": "contato@metax.ind.br"
+                    }, {
+                        "created_at": "4/4/2022 20:06:36",
+                        "razao_social": "galcromo ind e com ltda",
+                        "endereco": "Rua Castelo, Nº 12, Jardim Limoeiro, Serra - 29164-030, ES",
+                        "responsavel": "Carlos cezar de moraes",
+                        "telefone": 2732282272,
+                        "celular": 27992712600,
+                        "site": "www.galcromo.com.br",
+                        "Logomarca": "images/galcromo.png",
+                        "email": "galcromo@galcromo.com.br"
+                    }, {
+                        "created_at": "4/4/2022 20:06:36",
+                        "razao_social": "Macval Equipamentos Industriais",
+                        "endereco": "Rua Guimarães Junior Nº 1285 Jardim Limoeiro  Serra  ES CEP 29164-046",
+                        "responsavel": "Wesley Joaquim Henrique Correia",
+                        "telefone":2730520500,
+                        "celular":27999445004,
+                        "site": "www.macval-es.com.br",
+                        "Logomarca": "images/Macval.png",
+                        "email": "vendas@macval-es.com.br"
+                    }, {
+                        "created_at": "4/4/2022 20:06:36",
+                        "razao_social": "ControlVix",
+                        "endereco": "Rua Olympio Rodrigues Passos, 116 Vitória - ES - CEP: 29072-290",
+                        "responsavel": "Marcos Aurélio Scopel Simões",
+                        "telefone": 2733257208,
+                        "celular": 27997016061,
+                        "site": "www.controlvix.com.br",
+                        "Logomarca": "images/Controlvix.png",
+                        "email": "marcos@controlvix.com.br"
+                    }, {
+                        "created_at": "4/4/2022 20:06:36",
+                        "razao_social": "Port Ship Dive Serviços Subaquaticos LTDA",
+                        "endereco": "Rua Edgard de Souza N°237 Nossa Senhora da Penha Vila Velha / ES CEP 29110-110",
+                        "responsavel": "Adaias Rodrigues Junior",
+                        "telefone": 2730316677,
+                        "celular": 27999413291,
+                        "site": "www.portshipdive.com",
+                        "Logomarca": "images/Portship.png",
+                        "email": "portship@portshipdive.com"
+                    }, {
+                        "created_at": "4/4/2022 20:06:36",
+                        "razao_social": "GásExpress - O app de pedir gás",
+                        "responsavel": "Gabriel Pereira Passos",
+                        "telefone": 2733225518,
+                        "celular": 27988144941,
+                        "site": "gasexpress.app.br",
+                        "Logomarca": ""
+                    },{
+                        "created_at": "4/4/2022 22:10:40",
+                        "razao_social": "Comercial Strauss Comercio de Peças e Equipamentos industriais Eireli",
+                        "endereco": "Av Augusto Emilio Estelita Lins - 100, 29.090-590",
+                        "responsavel": "",
+                        "telefone": 27996631315,
+                        "celular": "",
+                        "site": "https://comercialstrauss.com.br/",
+                        "Logomarca": "images/Straus.png"
+                    }, {
+                        "created_at": "4/4/2022 22:10:40",
+                        "razao_social": "Terra Maquinas e Equipamentos",
+                        "endereco": "Av. Marechal Mascarenhas de Moraes, 99. Lojas 2 e 3 Centro Vitória ES",
+                        "responsavel": "Gustavo Belesa Baracho",
+                        "telefone": 5527988192029,
+                        "celular": 27988192029,
+                        "site": "www.terramaquinas.emp.br",
+                        "Logomarca": "images/terra.png",
+                    }]
+                }
+            }
+        }).mount('#expositores');
+
+
         Vue.createApp({
             data() {
                 return {
@@ -1064,15 +1557,15 @@
                 }
             }
         }).mount('#expositores');
-    </script>
+
+
+            </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
 
     <script>
-
-    
         if (window.location.hash == "#programacao") {
             $('#programacao').modal('show')
         }
@@ -1089,18 +1582,16 @@
          
            
              
-             $('#promocao').on('hidden.bs.modal', function () {
-  $('#video')[0].pause();
-});
+        $('#promocao').on('hidden.bs.modal', function () {
+            $('#video')[0].pause();
+        });
   
   
-  function reproduzirVideo() {
-    var video = document.getElementById("video");
-     video.muted = !video.muted
-    video.play();
-  }
-
+        function reproduzirVideo() {
+            var video = document.getElementById("video");
+            video.muted = !video.muted
+            video.play();
+        }
     </script>
-</body>
 
 </html>
