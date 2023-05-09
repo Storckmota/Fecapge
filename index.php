@@ -302,7 +302,7 @@
                     <p> <b><a href="#" class="title-color-3" data-toggle="modal" data-target="#edicao3"><i>+
                                     Fotos</i></a></b></p>
                      
-                                    <a class=" btn btn-outline-light btn-red mb-2" href="#" data-toggle="modal" style="width:200px" data-target="#expositores" @click.prevent="setExpositores()">Expositores da 3ª Edição</a>
+                                    <a class=" btn btn-outline-light btn-red mb-2" href="#" data-toggle="modal" style="width:200px" data-target="#expositores3">Expositores da 3ª Edição</a>
 
                      
                 </div>
@@ -555,6 +555,50 @@
         </div>
     </div>
 
+    <div class="modal fade pg-show-modal" id="expositores3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="title-color d-flex justify-content-center align-items-center mb-4 flex-wrap">Expositores
+                        <img src="images/logo-para-fundo-branco.jpg" />
+                    </h2>
+                    <div class="card-columns">
+                        <div class="card" v-for="(expositor, executor_index) in expositores3" :key="executor_index">
+                            <div style="height: 150px; width: 100%;" class="text-center p-3">
+                                <a :href="expositor.site" target="_blank">
+                                    <img style="object-fit: contain; width: 100%;
+                                    height: 130px;" :src="expositor.Logomarca" :alt="expositor.razao_social" />
+                                </a>
+                            </div>
+
+                            
+                            <div>
+                                <div class="p-3"><strong class="text-uppercase">{{expositor.razao_social}}</strong>
+                                </div>
+                                <p class="card-text">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" v-if="expositor.site">
+                                            <b>Site:</b> <a :href="expositor.site" target="_blank">{{expositor.site}}</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Endereço:</b> {{expositor.endereco}}
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Telefone:</b> {{expositor.telefone}}
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade pg-show-modal" id="edicao1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -764,7 +808,7 @@
 </div>
 </body>
 <script src="https://unpkg.com/vue@3"></script>
-    <script>
+   <script>
           Vue.createApp({
             data() {
                 return {
@@ -1158,12 +1202,13 @@
                 }
             }
         }).mount('#expositores');
+</script>
 
-
+<script>
         Vue.createApp({
             data() {
                 return {
-                    expositores: [{
+                    expositores3: [{
                         "created_at": "3/29/2022 9:34:19",
                         "razao_social": "Endserv Engenharia e Serviços",
                         "cnpj": "07460856000199",
@@ -1556,10 +1601,10 @@
                     }]
                 }
             }
-        }).mount('#expositores');
+        }).mount('#expositores3');
 
 
-            </script>
+</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -1572,6 +1617,10 @@
 
         if (window.location.hash == "#expositores") {
             $('#expositores').modal('show')
+        }
+        
+        if (window.location.hash == "#expo") {
+            $('#expo').modal('show')
         }
 
          if (window.location.hash != "#programacao" && window.location.hash != "#expositores") {
